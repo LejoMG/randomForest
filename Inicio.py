@@ -46,7 +46,6 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-
 # Contenido principal
 st.markdown('<h1 class="main-header">🌳 Random Forest</h1>', unsafe_allow_html=True)
 
@@ -93,14 +92,31 @@ st.markdown("*Responde de forma clara y completa. Puedes utilizar ejemplos para 
 with st.expander("🤔 Ver preguntas sobre Random Forest"):
     st.markdown("""
     1. **¿Qué es el algoritmo Random Forest y para qué se utiliza?**
+       Random Forest es un algoritmo de aprendizaje automático que agrupa múltiples árboles de decisión para realizar predicciones más precisas y robustas. Se utiliza principalmente para tareas de clasificación y regresión, como el diagnóstico médico, predicción de precios, y más.
+    
     2. **Explica cómo funciona Random Forest durante la fase de entrenamiento.**
-    3. **¿Por qué Random Forest se considera un algoritmo de ensamble?**
-    4. **¿Cuál es la diferencia principal entre un árbol de decisión y un Random Forest?**
-    5. **¿Qué ventajas ofrece Random Forest frente a otros modelos de aprendizaje supervisado?**
-    6. **Menciona dos aplicaciones reales en las que se podría usar Random Forest.**
-    7. **¿Qué significa el término "bootstrap" en el contexto de Random Forest?**
-    """)
+       Durante el entrenamiento, Random Forest utiliza el método de **bootstrap** (muestreo con reemplazo) para generar subconjuntos de los datos. Cada árbol se entrena con un subconjunto de los datos y características aleatorias, lo que introduce diversidad. Luego, el algoritmo combina las predicciones de todos los árboles para obtener un resultado final confiable.
 
+    3. **¿Por qué Random Forest se considera un algoritmo de ensamble?**
+       Random Forest es un algoritmo de ensamble porque combina los resultados de múltiples árboles de decisión, entrenados de forma independiente, para tomar decisiones más robustas y menos propensas a sobreajuste. La combinación de múltiples modelos mejora la precisión general del modelo.
+
+    4. **¿Cuál es la diferencia principal entre un árbol de decisión y un Random Forest?**
+       Un árbol de decisión es un modelo único que toma decisiones basadas en características de los datos, mientras que Random Forest es un conjunto (o "bosque") de muchos árboles de decisión. Random Forest utiliza votación o promedio de los árboles para hacer una predicción más robusta, mientras que un solo árbol de decisión puede ser susceptible a sobreajuste.
+
+    5. **¿Qué ventajas ofrece Random Forest frente a otros modelos de aprendizaje supervisado?**
+       Random Forest tiene varias ventajas:
+       - **Robustez ante el sobreajuste**: La combinación de múltiples árboles reduce el riesgo de sobreajuste.
+       - **Manejo de datos faltantes**: Puede manejar datos faltantes sin necesidad de complejas imputaciones.
+       - **Evaluación de la importancia de características**: Permite identificar qué variables son más importantes para la predicción.
+    
+    6. **Menciona dos aplicaciones reales en las que se podría usar Random Forest.**
+       - **Diagnóstico médico**: Se puede usar para clasificar a los pacientes en función de sus síntomas y características clínicas, para diagnosticar enfermedades.
+       - **Predicción de calidad de productos en manufactura**: Para predecir la calidad de los productos basados en condiciones de producción, como temperatura y humedad.
+
+    7. **¿Qué significa el término "bootstrap" en el contexto de Random Forest?**
+       El **bootstrap** es una técnica de muestreo con reemplazo utilizada para crear diferentes subconjuntos de los datos para entrenar cada árbol en Random Forest. Esto permite que cada árbol vea datos ligeramente diferentes y contribuye a la diversidad entre los árboles, lo que mejora la generalización del modelo.
+    """)
+    
 # Footer
 st.markdown("---")
 st.markdown("🔬 **Desarrollado con Streamlit y scikit-learn** | 🌳 **Random Forest ML System**")
